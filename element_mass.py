@@ -71,7 +71,6 @@ def element_mass (*args):
     i=0; Element_mass = []; Isotope_label = []; iso_mass_value_list = []
     avg_element_mass = []
     while i < len(args):
-        print(len(args))
         f = open(fname, "r") #opens the file name
         user_input = str(args)
         #x splits all three user inputs
@@ -138,12 +137,12 @@ def element_mass (*args):
                             Isotope_label.append(isotope_name)
                             iso_mass_value_list.append(iso_mass_value)
                             print ("the mass of %s = %f " % (isotope_name, mass))
+                            break
             except ValueError:
                 pass
             if line == '': #Reads until end of file
-                print("Reached the end of File")
+                #print("Reached the end of File")
                 break
         i += 1
-        print(i)
         f.close()
     return Element_mass
