@@ -143,6 +143,6 @@ def element_mass (*args):
             if line == '': #Reads until end of file
                 #print("Reached the end of File")
                 break
-        i += 1
+        i += 1 
         f.close()
     return Element_mass
